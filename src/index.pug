@@ -1,0 +1,23 @@
+.navbar
+  img.info(src="https://hahow.in/assets/images/publication/proposal-flow-tablet.png", alt="")
+#app
+  .classbox(v-for="cls in classes")
+    .teacher(v-bind:style="'background-image: url(' + cls.owner.profileImageUrl +')'")
+    .top
+      .classpic(v-bind:style="'background-image: url(' + cls.coverImage.url + ')'")
+      .tag 募資中
+      .bookbtn
+        i.fa.fa-bookmark-o
+    .bottom
+      h1.classtitle {{cls.title}}
+      .texts
+        .pricerow
+          .preprice 預購價
+            span.orange NT$ {{cls.preOrderedPrice}}
+          .lastday 剩
+            span.orange {{parseInt((new Date(cls.proposalDueTime) - new Date(cls.incubateTime))/1000/60/60/24)}} 天
+        .progressbar
+          .valuebar(v-bind:style="'width: ' + (cls.numSoldTickets/cls.successCriteria.numSoldTickets)*100 + '%'")
+        .nowpeople 已募資
+          span.orange {{cls.numSoldTickets}}/{{cls.successCriteria.numSoldTickets}} people
+      .orangebar
