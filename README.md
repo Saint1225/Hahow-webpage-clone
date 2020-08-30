@@ -1,6 +1,8 @@
 # Hahow-webpage-clone
 
-Web page clone of Taiwan online course website, by using HTML(Pug) / CSS(SASS) animation / Vue.js(for JSON importing by Ajax)
+Web page clone of Taiwan online course website 
+
+HTML(Pug) / CSS(SASS) animation / Vue.js(for JSON importing by Ajax)
 
 CodePen URL: https://codepen.io/vincent1225/full/ExPRrzV
 
